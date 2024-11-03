@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'Mecanico/sidebar.css' %}">
+    <link rel="stylesheet" href="{% static 'Mecanico/main-content.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <!-- Contenedor principal -->
+<div class="container-fluid ">
+
+    <!-- Barra lateral con menú -->
+    <div class="sidebar">
+
+        <!-- Imagen de perfil -->
+      <div class="profile-picture">
+        <img src="{% static 'Mecanico/assets/perfil-img.png' %}" alt="Imagen de perfil" class="img-fluid rounded-circle">
+      </div>
+      <ul class="nav flex-column">  
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Menu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/">Buscar Orden</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Opción 2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Opción 3</a>
+        </li>
+      </ul>
+    </div>
+    
+    {% block content-mecanico %}
+    {% endblock content-mecanico %}
+
+  </div>
+  <script src="{% static 'Mecanico/script.js' %}"></script>
+</body>
+</html>

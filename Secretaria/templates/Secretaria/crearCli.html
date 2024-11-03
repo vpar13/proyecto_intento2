@@ -1,0 +1,35 @@
+{% extends 'Secretaria/base.html' %}
+{% load static %}
+
+{% block content-crearCli %}
+
+    <!-- index.html -->
+
+    <div class="main-content">
+
+        <!-- Formulario de búsqueda -->
+        <h2>Crear cliente</h2>
+        <form>
+            <div class="form-group">
+                <label for="rut_cliente">RUT del cliente:</label>
+                <input type="text" class="form-control" id="rut_cliente" name="rut_cliente">
+              </div>
+          <div class="form-group">
+            <label for="patente">Nombre:</label>
+            <input type="text" class="form-control" id="nombre" name="nombre">
+          </div>
+          
+          <div class="form-group">
+            <label for="patente">Primer Apellido:</label>
+            <input type="text" class="form-control" id="Apellido" name="Apellido">
+          </div>
+
+          <div class="form-group">
+            <label for="patente">telefono:</label>
+            <input type="text" class="form-control" id="telefono" name="telefono">
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+
+
+{% endblock content-crearCli %}

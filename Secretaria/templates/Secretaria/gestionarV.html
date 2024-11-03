@@ -1,0 +1,49 @@
+{% extends 'Secretaria/base.html' %}
+{% load static %}
+
+{% block content-crearCli %}
+<div class="main-content">
+
+    <!-- Formulario de búsqueda -->
+    <h2>Buscar Vehiculo</h2>
+    <form>
+      <div class="form-group">
+        <label for="patente">Ingrese la patente</label>
+        <input type="text" class="form-control" id="patente" name="patente">
+      </div>
+
+      <button type="submit" class="btn btn-primary">Buscar</button>
+    </form>
+
+    <!-- Tabla de resultados -->
+    <div id="tabla-resultados" style="display: none;">
+      <h2>Resultados de la búsqueda</h2>
+      <table class="table table-striped" id="my-table">
+            <thead>
+            <tr>
+                <th>Nombre del cliente</th>
+                <th>Rut del cliente</th>
+                <th>Patente</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Año</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>pepe orde</td>
+                    <td>25447568-9</td>
+                    <td>ABC123</td>
+                    <td>toyota</td>
+                    <td>raptor</td>
+                    <td>2020</td>
+                    <td>
+                    <button class="edit-button">Editar</button>
+                    </td>
+                </tr>
+            </tbody>
+      </table>
+  </div>
+</div>
+
+{% endblock content-crearCli %}

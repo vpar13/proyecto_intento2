@@ -1,0 +1,37 @@
+{% extends 'Secretaria/base.html' %}
+{% load static %}
+
+{% block content-crearCli %}
+
+<div class="main-content">
+
+    <!-- Formulario de búsqueda -->
+    <h2>Ingresa un vehiculo</h2>
+    <form>
+      <div class="form-group">
+        <label for="patente">Patente:</label>
+        <input type="text" class="form-control" id="patente" name="patente">
+      </div>
+      <div class="form-group">
+        <label for="rut_cliente">Nombre:</label>
+        <input type="text" class="form-control" id="rut_cliente" name="rut_cliente">
+      </div>
+      <div class="form-group">
+        <label for="Marca">Valor</label>
+        <input type="text" class="form-control" id="Marca" name="Marca">
+      </div>
+      <div class="form-group">
+        <select id="cars" name="cars" class="form-control">
+          <option class="form-control" value="volvo">Motor</option>
+          <option class="form-control" value="saab">Bujia</option>
+          <option class="form-control" value="mercedes">Aceite</option>
+          <option class="form-control" value="audi">Pintura</option>
+        </select>
+      </div>
+     
+      <button type="submit" class="btn btn-primary">Buscar</button>
+    </form>
+
+</div>  
+
+{% endblock content-crearCli %}

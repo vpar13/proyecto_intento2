@@ -1,0 +1,21 @@
+{% extends 'Secretaria/base.html' %}
+{% load static %}
+
+{% block content-crearCli %}
+
+    <!-- index.html -->
+
+    <div class="main-content">
+
+        <!-- Formulario de búsqueda -->
+        <h2>Buscar cliente</h2>
+        <form>
+          <div class="form-group">
+            <label for="rut_cliente">RUT del cliente:</label>
+            <input type="text" class="form-control" id="rut_cliente" name="rut_cliente">
+          </div>
+          <button type="submit" class="btn btn-primary">Buscar</button>
+        </form>
+
+
+{% endblock content-crearCli %}

@@ -1,0 +1,56 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'Secretaria/sidebar.css' %}">
+    <link rel="stylesheet" href="{% static 'Secretaria/crearCli.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <!-- Contenedor principal -->
+  <div class="container-fluid ">
+
+    <!-- Barra lateral con menú -->
+    <div class="sidebar">
+
+        <!-- Imagen de perfil -->
+      <div class="profile-picture">
+        <img src="{% static 'Mecanico/assets/perfil-img.png' %}" alt="Imagen de perfil" class="img-fluid rounded-circle">
+      </div>
+      <ul class="nav flex-column">  
+        <li class="nav-item">
+          <a class="nav-link active" href="/crearCli/">Crea un Cliente</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/GestionarC/">Gestionar Cliente</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/crearV/">Crea Vehiculo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/gestionarV/">Gestionar Vehiculo</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/crearR/">Crear Reparaciones</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/crearOT/">Crear ordenes de trabajo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/GestionarOT/">Gestionar ordenes de trabajo</a>
+          </li>
+      </ul>
+    </div>
+    
+    <!-- Contenido principal -->
+    {% block content-crearCli %}
+    {% endblock content-crearCli%}
+
+  </div>
+</body>
+</html>

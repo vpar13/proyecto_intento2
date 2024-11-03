@@ -1,0 +1,65 @@
+{% extends 'Mecanico/base.html' %}
+{% load static %}
+
+{% block content-mecanico %}
+
+    <!-- Contenido principal -->
+    <div class="main-content">
+
+      <!-- Formulario de búsqueda -->
+      <h2>Filtar por</h2>
+      <form>
+        <div class="form-group">
+          <label for="patente">Patente:</label>
+          <input type="text" class="form-control" id="patente" name="patente">
+        </div>
+        <div class="form-group">
+          <label for="rut_cliente">RUT del cliente:</label>
+          <input type="text" class="form-control" id="rut_cliente" name="rut_cliente">
+        </div>
+        <div class="form-group">
+          <label for="fecha">Fecha:</label>
+          <input type="date" class="form-control" id="fecha" name="fecha">
+        </div>
+        <button type="submit" class="btn btn-primary">Buscar</button>
+      </form>
+
+      <!-- Tabla de resultados -->
+      <div id="tabla-resultados" style="display: none;">
+        <h2>Resultados de la búsqueda</h2>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Fecha de entrega</th>
+              <th>Fecha de salida</th>
+              <th>Patente</th>
+              <th>Reparaciones a realizar</th>
+              <th>Observaciones</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2023-02-20</td>
+              <td>2023-02-25</td>
+              <td>ABC123</td>
+              <td>Cambio de aceite y filtro de aire</td>
+              <td>Ninguna</td>
+              <td>
+                <select id="estado" name="estado">
+                  <option value="en_pausa">En pausa</option>
+                  <option value="en_ejecucion">En ejecución</option>
+                  <option value="terminado">Terminado</option>
+                </select>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+  
+  
+
+
+
+{% endblock content-mecanico%}
